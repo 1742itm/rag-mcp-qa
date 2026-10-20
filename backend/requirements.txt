@@ -1,0 +1,24 @@
+# ---- Web 框架 ----
+fastapi>=0.110,<0.116
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+pydantic>=2.6
+pydantic-settings>=2.2
+python-dotenv>=1.0
+
+# ---- SSE 流式输出 ----
+sse-starlette>=2.1
+
+# ---- LLM（兼容 OpenAI 接口：DeepSeek / Ollama / 通义千问）----
+openai>=1.30
+
+# ---- RAG：文档解析 / 切片 / 向量库 ----
+pypdf>=4.2
+langchain-text-splitters>=0.2
+chromadb>=0.4.24,<0.6
+# chromadb 0.5.x 仍用 posthog 旧版位置参数接口，posthog>=6 会让遥测报错刷屏
+posthog<6
+numpy>=1.24
+
+# ---- 向量化模型（可选用；未安装时自动降级为内置哈希向量）----
+sentence-transformers>=2.7
